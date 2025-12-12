@@ -207,7 +207,7 @@ If you use this game in your teaching or research, please cite it as:
   title = {Smart Scale Game: A Business Simulation for Corporate Entrepreneurship Education},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/ammon-salter-del/smart-scale-game}
+  url = (https://ammonsalter-del.github.io/smart-scale-game/)
 }
 ```
 
