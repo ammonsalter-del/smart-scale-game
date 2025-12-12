@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software in your teaching or research, please cite it as below."
+type: software
+title: "Smart Scale Game: A Business Simulation for Corporate Entrepreneurship Education"
+version: 1.6.32
+date-released: 2025-01-01
+url: "https://github.com/ammon-salter-del/smart-scale-game"
+repository-code: "https://github.com/ammon-salter-del/smart-scale-game"
+license: CC-BY-NC-SA-4.0
+authors:
+  - family-names: Salter
+    given-names: Ammon
+    affiliation: "Warwick Business School, The University of Warwick"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+contributors:
+  - family-names: Bignone
+    given-names: Federico
+  - family-names: Marsili
+    given-names: Orietta
+keywords:
+  - corporate entrepreneurship
+  - business simulation
+  - educational game
+  - scaling ventures
+  - innovation management
+  - experiential learning
+abstract: >-
+  Smart Scale Game is an educational business simulation designed to teach 
+  the challenges of corporate entrepreneurship through experiential learning. 
+  Players take on the role of a venture director at Neptune Corporation, 
+  navigating strategic trade-offs, resource allocation, and stakeholder 
+  management as they scale an internal venture over 12 months. The game 
+  features 238 unique decision events drawing on research in template 
+  replication, franchise scaling, and the limits to growth.
+references:
+  - type: article
+    authors:
+      - family-names: Winter
+        given-names: Sidney G.
+      - family-names: Szulanski
+        given-names: Gabriel
+    title: "Replication as Strategy"
+    journal: "Organization Science"
+    year: 2001
