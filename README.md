@@ -76,7 +76,7 @@ Your final outcome depends on balanced excellence across metrics:
 ## 🚀 Getting Started
 
 ### Play Online
-Visit [https://ammon-salter-del.github.io/smart-scale-game]) to play instantly in your browser.
+Visit [https://ammon-salter-del.github.io/smart-scale-game]to play instantly in your browser.
 
 ### Run Locally
 ```bash
