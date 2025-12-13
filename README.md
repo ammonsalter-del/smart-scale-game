@@ -35,7 +35,7 @@ With limited budgets and competing demands from multiple departments, players mu
 - **Email-based gameplay** — Receive emails from department heads presenting real business dilemmas
 - **238 unique events** — Extensive variety ensures high replay value
 - **12-month campaign** — Complete narrative arc with quarterly reviews and feedback (6 months in Short Mode)
-- **3 venture choices** — FreshVine (sustainable food), PuriClean (water purification), or MindSpring (mental wellness) — each with unique scaling challenges
+- **4 venture choices** — FreshVine (sustainable food), PuriClean (water purification), or MindSpring (mental wellness) — each with unique scaling challenges
 - **5 department heads** — Each with unique personalities, priorities, and advice styles
 - **3 strategy paths** — Local, regional, or global expansion targets
 - **Neptune Reception** — Networking mini-game to build executive relationships and secure resources
