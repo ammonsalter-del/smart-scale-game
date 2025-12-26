@@ -211,9 +211,10 @@ Academic research on R&D portfolio management, project selection, and innovation
 ## Changelog
 
 ### Version 1.2 (Current)
+- **New: Management case study** - detailed description of SheidTech's context and market for pre-reading and added depth
 - **New: Resource Run mini-game** — Optional logistics challenge before Year 2 portfolio allocation that can provide bonus budget
 - **New: Professional Case Study PDF** — Download a comprehensive case study document summarising your two-year R&D leadership tenure
-- **Improved: Year 2 transition** — Streamlined flow with optional mini-game instead of mandatory committee meeting
+- **Improved: Year 2 transition** — Streamlined flow with mini-game instead of mandatory committee meeting
 - **Added: Linus Dahlander** as contributor
 - Various bug fixes and UI improvements
 
