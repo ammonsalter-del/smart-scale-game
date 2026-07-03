@@ -37,13 +37,85 @@
 -->
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7ZXGBNCF6"></script>
+
+    <!-- Google Analytics - GDPR opt-in consent. GA loads ONLY after explicit consent. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-J7ZXGBNCF6');
+
+      function _gaHasConsent() {
+        return localStorage.getItem('ga_consent') === 'accepted';
+      }
+
+      function _gaLoad() {
+        if (document.getElementById('ga-script')) return;
+        var sc = document.createElement('script');
+        sc.id = 'ga-script';
+        sc.async = true;
+        sc.src = 'https://www.googletagmanager.com/gtag/js?id=G-J7ZXGBNCF6';
+        document.head.appendChild(sc);
+        gtag('js', new Date());
+        gtag('config', 'G-J7ZXGBNCF6', { anonymize_ip: true });
+      }
+
+      function gaAccept() {
+        localStorage.setItem('ga_consent', 'accepted');
+        localStorage.setItem('ga_consent_date', new Date().toISOString());
+        _gaLoad();
+        _gaHideBanner();
+      }
+
+      function gaDecline() {
+        localStorage.setItem('ga_consent', 'declined');
+        localStorage.setItem('ga_consent_date', new Date().toISOString());
+        _gaHideBanner();
+      }
+
+      function gaChangePreference() {
+        localStorage.removeItem('ga_consent');
+        localStorage.removeItem('ga_consent_date');
+        _gaShowBanner();
+      }
+
+      function _gaHideBanner() {
+        var b = document.getElementById('ga-consent-banner');
+        if (b) b.style.display = 'none';
+        var c = document.getElementById('ga-pref-chip');
+        if (c) c.style.display = 'block';
+      }
+
+      function _gaShowBanner() {
+        var b = document.getElementById('ga-consent-banner');
+        if (b) b.style.display = 'flex';
+        var c = document.getElementById('ga-pref-chip');
+        if (c) c.style.display = 'none';
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var banner = document.createElement('div');
+        banner.id = 'ga-consent-banner';
+        banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;display:none;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:12px 16px;background:#1e293b;color:#e2e8f0;font-size:13px;line-height:1.5;font-family:system-ui,sans-serif;box-shadow:0 -2px 12px rgba(0,0,0,0.25);';
+        banner.innerHTML = '<span style="max-width:560px;">&#128202; This game can use cookies (Google Analytics) to count anonymous usage and improve the simulation. No advertising, no personal data, and declining changes nothing about the game.</span>' +
+          '<span style="white-space:nowrap;">' +
+          '<button onclick="gaAccept()" style="background:#4f46e5;color:white;border:none;border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer;margin-right:8px;">Accept</button>' +
+          '<button onclick="gaDecline()" style="background:transparent;color:#cbd5e1;border:1px solid #475569;border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer;">Decline</button>' +
+          '</span>';
+        document.body.appendChild(banner);
+
+        var chip = document.createElement('button');
+        chip.id = 'ga-pref-chip';
+        chip.setAttribute('aria-label', 'Change analytics preference');
+        chip.title = 'Change analytics preference';
+        chip.onclick = gaChangePreference;
+        chip.style.cssText = 'position:fixed;bottom:10px;left:10px;z-index:99998;display:none;background:rgba(30,41,59,0.85);color:#94a3b8;border:1px solid #475569;border-radius:999px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:system-ui,sans-serif;';
+        chip.textContent = 'Analytics: change choice';
+        document.body.appendChild(chip);
+
+        var choice = localStorage.getItem('ga_consent');
+        if (choice === 'accepted') { _gaLoad(); chip.style.display = 'block'; }
+        else if (choice === 'declined') { chip.style.display = 'block'; }
+        else { banner.style.display = 'flex'; }
+      });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
